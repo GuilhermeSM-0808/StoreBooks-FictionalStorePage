@@ -1,0 +1,220 @@
+/* Color Theme Swatches in Hex -------------------------------------------------------------------------- COLOR */
+.Book-Store-2-1-hex { color: #8F4D06; }
+.Book-Store-2-2-hex { color: #FFB363; }
+.Book-Store-2-3-hex { color: #FF8A0A; }
+.Book-Store-2-4-hex { color: #4D341A; }
+.Book-Store-2-5-hex { color: #BF6708; }
+
+/* ANIMATIONS ------------------------------------------ ANIMATIONS -------------------------------------ANIMATIONS */
+
+@keyframes logo{
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes floatIn {
+    0%{
+        transform: translateY(30px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+/* GLOBAL----------------------------------- GLOBAL ------------------------------------------ GLOBAL */
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #4D341A;
+}
+
+/* HEADER  ---------------------------------------- HEADER--------------------------------------------- HEADER*/
+
+header{
+    margin: 0;
+    top: 0;
+    width: 100%;
+    padding: 0px;
+
+    background-color: #FF8A0A;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+header div{
+    margin-left: 25px;
+    display: inline-block;
+}
+
+header div h1{
+    font-size: 48px;
+}
+header div h1 img {
+    position: absolute;
+    top: 33%;
+    margin-left: 20px;
+    max-width: 48px;
+    transform-style: preserve-3d;
+    animation: logo 8s infinite linear;
+}
+
+header .search{
+    style
+    position: absolute;
+    align-self: center;
+    left: 42%;
+
+}
+header .search input:focus{
+
+
+}
+
+header nav{
+    margin-right: 33px;
+}
+
+header nav ul li{
+    display: inline-block;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+    
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #4D341A;
+    font-size: 24px;
+}
+header nav ul li a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+/* IMAGE - LIBRARY ----------------------------------------- IMG ------------------------------------------- IMAGE */
+
+.BG{
+    width: 100%;
+    z-index: -1;
+    position: relative;
+}
+
+/* TOP SELLERS ------------------------------------------ TOP ----------------------------------------- TOP SELLERS*/
+
+.TopSellers{
+    background-color: #8F4D06;
+}
+
+.TopSellers h2{
+    color: #FFB363;
+    text-align: center;
+    font-size: 36px;
+    padding: 40px 20px;
+}
+
+.TopSellersList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 0px 100px 0px;
+}
+
+.TopSellersList li{
+    padding: 5px 20px 10px 20px;
+    margin: 8px 12px;
+    background-color: #FFB363;
+    list-style: none;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 1.5s;
+    border: #4D341A 3px solid;
+}
+.TopSellersList li div{
+    margin: 8px 2px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.TopSellersList li div button{
+    margin: 3px 20px;    
+    padding: 8px 20px;
+    width: 100%;
+    background-color: #4D341A;
+    color: #FFB363;
+    display: inline-block;
+}
+
+.TopSellersList li:hover{
+    border: #4D341A 6px solid;
+    transform: scale(1.1);
+    box-shadow: 10px 15px 8px 2px #2e1b07;
+
+}
+.TopSellersList li img{
+    max-width: 296px;
+    border: white 2px solid;
+}
+
+
+/* CATEGORIES -------------------------------- CATEGORIES ---------------------------------- CATEGORIES */
+
+.Categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 200px;
+}
+
+.Categories ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+
+    animation: floatIn 2s ease-out 1;
+}
+
+/* FOOTER ----------------------------------------- FOOTER ------------------------------------------- FOOTER*/
+
+footer {
+    background-color: #8F4D06;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    justify-content: space-between;
+    padding: 15px 80px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #4D341A;
+}
+
+footer ul li :hover{
+    color: white;
+}
