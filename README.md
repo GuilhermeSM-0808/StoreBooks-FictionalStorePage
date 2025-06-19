@@ -1,5 +1,5 @@
 # StoreBooks-FictionalStorePage
-This is an assigment for Uni
+This is an assigment for Uni and as so, I decided to make it into something more personal and decided to make it be a personal book review page disguised as a book store page.
 
 
 ## Asssigment description

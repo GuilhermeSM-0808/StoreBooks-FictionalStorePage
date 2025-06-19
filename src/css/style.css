@@ -17,14 +17,24 @@
     }
 }
 
-@keyframes floatIn {
-    0%{
-        transform: translateY(30px);
-        opacity: 0%;
+@keyframes fadeIn {
+    80%{
+        opacity: 60%;
     }
     100%{
         transform: translateY(0px);
         opacity: 100%;
+    }
+}
+
+@keyframes BG-img-animation {
+    20%{
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, -100); 
+    }
+    80%,100%{
+        opacity: 0;
+        transform: matrix(3, 0, 0, 3, 0, -300);
     }
 }
 
@@ -59,6 +69,28 @@ header{
     z-index: 1;
 }
 
+@media (max-width: 800px){
+    header{
+        flex-direction: column;
+    }
+    header div{
+        display: block;
+        padding: 40px 0px;
+    }
+    header .searchbar{
+        margin-top: 80px;
+        padding: 40px 0px;
+        position: static;
+    }
+    header nav{
+        margin-top: 30px;
+    }
+    header nav ul li{
+        padding: 10px;
+        display: block;
+    }
+}
+
 header div{
     margin-left: 25px;
     display: inline-block;
@@ -76,15 +108,23 @@ header div h1 img {
     animation: logo 8s infinite linear;
 }
 
-header .search{
-    style
+header .searchbar{
     position: absolute;
     align-self: center;
-    left: 42%;
+    left: 42%;   
+}
+
+header .searchbar input{
+    padding: 15px 8px;
+    background-color: #8F4D06;
+    color: #FFB363;
+    border-radius: 24px;
 
 }
-header .search input:focus{
 
+header .searchbar input:focus{
+    color: #8F4D06;
+    background-color: #FFB363;
 
 }
 
@@ -108,6 +148,7 @@ header nav ul li a{
 }
 header nav ul li a:hover{
     text-decoration: none;
+    transition: all 0.5s;
     color: white;
 }
 
@@ -117,6 +158,10 @@ header nav ul li a:hover{
     width: 100%;
     z-index: -1;
     position: relative;
+
+    animation: BG-img-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit -800px;
 }
 
 /* TOP SELLERS ------------------------------------------ TOP ----------------------------------------- TOP SELLERS*/
@@ -164,6 +209,11 @@ header nav ul li a:hover{
     display: inline-block;
 }
 
+.TopSellersList li div button:active{
+    background-color: #2e1b07;
+    color: #FF8A0A;
+}
+
 .TopSellersList li:hover{
     border: #4D341A 6px solid;
     transform: scale(1.1);
@@ -178,20 +228,43 @@ header nav ul li a:hover{
 
 /* CATEGORIES -------------------------------- CATEGORIES ---------------------------------- CATEGORIES */
 
+
 .Categories{
+    height: auto;
+    min-height: 00px;
+    width: 75%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.Categories ul li{
+.Categories h2{
+    color: #FFB363;
+}
+
+.Categories ul a li{
+    margin: 10px 5px;
     list-style: none;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 20px;
+    background-color: #BF6708;
+    color: #2e1b07;
+    border-radius: 15px;
 
-    animation: floatIn 2s ease-out 1;
+    transform: translateY(80px);
+    opacity: 0%;
+  
+    animation: fadeIn linear forwards;
+    animation-timeline: view(850px -20px);
 }
+
+.Categories ul a li:hover{
+    transition: all 0.8s;
+    background-color: #FFB363;
+}
+
 
 /* FOOTER ----------------------------------------- FOOTER ------------------------------------------- FOOTER*/
 
@@ -208,13 +281,16 @@ footer ul li {
     display: inline-block;
     justify-content: space-between;
     padding: 15px 80px;
+    
 }
 
 footer ul li a{
+    font-size: 24px;
     text-decoration: none;
-    color: #4D341A;
+    color: #2e1b07;
 }
 
-footer ul li :hover{
+footer ul li a:hover{
+    transition: all 0.8s;
     color: white;
 }
