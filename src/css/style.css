@@ -170,11 +170,19 @@ header nav ul li a:hover{
     background-color: #8F4D06;
 }
 
-.TopSellers h2{
+.TopSellers div h2{
     color: #FFB363;
     text-align: center;
     font-size: 36px;
-    padding: 40px 20px;
+    padding: 40px 20px 10px 20px;
+}
+.TopSellers div p{
+    color: #2e1b07;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 0px 25px 0px;
+    display: block;
+    background-color: #BF6708;
 }
 
 .TopSellersList{
@@ -234,14 +242,28 @@ header nav ul li a:hover{
     min-height: 00px;
     width: 75%;
     margin: auto;
+}
+
+.Categories div{
+    text-align: center;
+    padding: 10px 0px 5px 0px;
+}
+.Categories h2{
+    color: #FFB363;
+    padding: 20px auto 5px auto;
+}
+.Categories p{
+    color: #BF6708;
+    padding: 5px auto 20px auto;
+    position: relative;
+}
+
+.Categories ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-.Categories h2{
-    color: #FFB363;
+    justify-content: space-between;
+    padding-bottom: 40px;
 }
 
 .Categories ul a li{
@@ -257,7 +279,7 @@ header nav ul li a:hover{
     opacity: 0%;
   
     animation: fadeIn linear forwards;
-    animation-timeline: view(850px -20px);
+    animation-timeline: view(850px -33px);
 }
 
 .Categories ul a li:hover{
